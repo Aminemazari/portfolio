@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+.MyName{
+    font-family: var(--font-family) ;
+    font-weight: 900;
+    font-size: 28px;
+    color: var(--secondaryColor);
+    cursor: pointer;
+   position: absolute;
+    left:73px;
+}
+.navBarButtton{
+    display: flex;
+    gap: 20px;
+    align-self: center;
+}
+.aboutButton{
+    color: var(--primaryColor);
+    padding:  7px  20px;
+    border-radius: 10px;
+    font-family: var(--font-family) ;    
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    background-color: var(--secondaryColor);
+
+}
+.contactButton{
+    color: var(--secondaryColor);
+    padding: 7px 20px;
+    border-radius: 10px;
+    font-family: var(--font-family) ;
+    font-weight: 500;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid var(--secondaryColor);
+    background-color: var(--primaryColor); 
+}
+.modesButton{
+    background-color: transparent;
+    border: none;
+    position: absolute;
+
+    right:60px;
+}
+.project{
+  display: flex;
+    flex-direction: column;
+    gap:17px;
+    align-items: center;
+    background-color: #26313F;
+    border-radius: 30px;
+    max-width:450px;
+    height: 530px;
+    overflow: hidden;
+    padding-bottom: 30px;
+    transition: all ease-in 200ms;
+}
+.project:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.projectsImg{
+    width:100%;
+    height: 200px;
+    background-color: transparent;
+}
+.projectsName{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    color: #fff;
+}
+.projectOverview{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 19px;
+    color: #a9a9a9;
+   text-align: center;
+}
+.Technologies-Used{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 22px;
+    color: #fff;
+}
+.Technologies-List{
+    display: flex;
+    gap:15px;
+}
+.buttonViewProject{
+    display: flex;
+    gap:20px;
+}
+.GitHub-repository{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    border:none;
+    padding: 10px;
+    background-color: var(--fiveColor);
+}
+.Visit-Site{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+    background-color: transparent;
+}

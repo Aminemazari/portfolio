@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding:0;
+}
+:root{
+    --primaryColor:#F0F0F4;
+    --secondaryColor:#26313F;
+    --thirdColor:#26313F;
+    --forthColor:rgba(38, 49, 63, 0.5);
+    --fiveColor:#F0F0F4;
+    --font-family: "Satoshi", sans-serif;
+    --second-family: "Poppins", sans-serif;
+    
+}
+
+[data-theme="dark"] {
+    --primaryColor: #151C25;
+    --secondaryColor: #55E5A4;
+    --thirdColor:#FFFFFF;
+    --forthColor:#55e5a4;
+    --fiveColor:#55e5a4;
+  }
+body{
+    background-color: var(--primaryColor);
+}
+button{
+    cursor: pointer;
+}
+.myPicture{
+    width: 200px;
+}
+.Introduction{
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 56px);
+    padding-left: 20px;
+    padding-right:20px;
+    padding-top: 20px;
+    gap:100px;
+    border-bottom: 1px solid var(--forthColor) ;
+  
+}
+.sammary{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    max-width: 600px;
+    padding-left:  24.5px; ;
+}
+.MyNameInSammary{
+    color:var(--thirdColor);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 22px;
+
+}
+.MyJobName{
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 42px;
+    color: var(--secondaryColor);
+}
+.sammaryParagraph{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    color: #686565;
+}
+.AvailableCountainer{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+.getInTouchButton{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    color: var(--primaryColor);
+    background-color: var(--secondaryColor);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+
+}
+.availableNowButton{
+    display: flex;
+    gap:10px;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+    color: #686565;
+}
+.circleGreenPoint{
+    border-radius: 100%;
+    background-color: #03ff8d;
+    height: 15px;
+    width: 15px;
+    align-self: center;
+    filter: blur(2px);
+}
+.pictureTeleHack{
+    height: 360px;
+    width: 310px;
+    overflow: hidden;
+}
+.pictureTeleHack{
+align-self: center;
+justify-self: center;
+}
+.cadre2{
+    position: absolute;
+    left: -15px;
+    top:-15px;
+    z-index: -1;
+   background-color: var(--secondaryColor);
+   width: 235px;
+   height: 250px;
+}
+.photoOftheEvent2{
+    position: relative;
+    background-color: transparent;
+    height: 388px;
+    width: 300px;
+    transition: transform 1s, opacity 1s, visibility 0s;
+    transform: translateX(100px);
+    opacity: 0;
+    visibility: hidden;
+}
+.photoOftheEvent2.in-view{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+   
+}
+.photoOftheEvent2:hover{
+    transform: translateX(-10px);
+
+}
+/*/////////////////////////////////////*/
+.AboutMe{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap:70px;
+    flex-wrap: wrap-reverse;
+    border-bottom: 1px solid var(--forthColor) ;
+}
+
+
+.aboutMeDescription{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.aboutmetextDiv{
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 32px;
+   max-width: 220px;
+   color: var(--thirdColor);
+}
+.aLine{
+    height: 2px;
+    width: 22px;
+    align-self: center;
+    background-color:var(--secondaryColor) ;
+}
+
+.whoAmI{
+    display: flex;
+    gap:5px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 12px;
+    color: var(--secondaryColor);
+    align-self: end;
+}
+.educationAndInterest{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    color: #686565;
+    max-width: 600px;
+}
+.skillsList{
+    margin-top:15px ;
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap-reverse;
+}
+.photoOftheEvent{
+    position: relative;
+    background-color: transparent;
+    width: 458px;
+    height: 450px;
+    transition: transform 1s, opacity 1s, visibility 0s;
+    transform: translateX(-300px);
+    opacity: 0;
+    visibility: hidden;
+  
+}
+.photoOftheEvent.in-view{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+   
+}
+.in-view:hover{
+    transform: translateX(20px);
+}
+.microhackPhoto{
+    position: absolute;
+    z-index: 100;
+    width: 458px;
+    height: 450px;
+    
+}
+.cadre{
+    position: absolute;
+    left: -15px;
+    top:-15px;
+    z-index: 1;
+   background-color: var(--secondaryColor);
+   width: 235px;
+   height: 400px;
+}
+/*//////////////////////////////////*/
+.projects{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    gap:50px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--forthColor) ;
+}
+.projectsCountainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:100px;
+    flex-wrap: wrap;
+}
+.projects-word{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 42px;
+    text-align: center;
+    color: var(--thirdColor);
+}
+/*////////////////////////////////*/
