@@ -72,7 +72,8 @@ const Portfolio = () => {
             <h1 className='MyJobName'>Frontend Developer.</h1>
             <p className='sammaryParagraph'>My expertise lies in creating captivating user experiences by leveraging cutting-edge frontend technologies and frameworks, transforming your vision into reality. In addition to this, I possess advanced skills in geoinformatics, adept at harnessing spatial data to reveal valuable insights</p>
             <div className='AvailableCountainer'>
-                <button className='getInTouchButton'>
+                <button className='getInTouchButton'
+                onClick={scrollToGetTouch}>
                     Get in Touch
                 </button>
                 <button className='availableNowButton'>
