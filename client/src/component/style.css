@@ -126,3 +126,54 @@
     padding: 10px;
     background-color: transparent;
 }
+.menu{
+    display: none;
+}
+@media screen and (max-width: 970px)  {
+.MyName{
+    left:10px;
+}
+}
+@media screen and (max-width: 970px)  {
+    .navbar{
+        display: none;
+    }
+    .menu{
+        display: block;
+    }
+    .aboutButton{
+        width: 100%;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 482px)  {
+    .project{
+        max-width: 375px;
+    }
+    .projectsName{
+        font-weight: 700;
+        font-size: 24px;
+    }
+    .projectOverview{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .Technologies-Used{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .GitHub-repository{
+        font-weight: 500;
+        font-size: 14px;
+    }
+    .Visit-Site{
+        font-weight: 500;
+        font-size: 14px;
+    }
+.menuControle{
+    max-width: 300px;
+    border-inline-end:none;
+}
+
+   
+}
