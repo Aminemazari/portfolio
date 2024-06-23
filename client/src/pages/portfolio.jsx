@@ -21,45 +21,88 @@ import send from "../assets/Vector.svg"
 import github from "../assets/Frame 9.svg"
 import linkdln from "../assets/Frame 10.svg"
 import Circle from '../component/Circle';
-
+import { Button, message, Space } from 'antd';
+import emailjs from 'emailjs-com';
 const Portfolio = () => {
-    const handleDarkMode=(value)=>{
-      
+  const [Email,setEmail]= useState("");
+  const [userName,setUserName]= useState("");
+  const [Message,setMessage]= useState("");
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+  const targetRef = useRef(null);
+  const targetRef2=useRef(null);
+  const targetRef3=useRef(null);
+
+  const handleDarkMode=(value)=>{
+
        document.documentElement.setAttribute('data-theme', value ? 'dark' : 'light');
     }
-    const [ref, inView] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-      });
-      const [ref2, inView2] = useInView({
-        triggerOnce: true,
-        threshold: 0.1,
-      });
-      const targetRef = useRef(null);
-      const targetRef2=useRef(null);
-      const targetRef3=useRef(null);
 
+  const handleEmailChange =(e)=>{
+   setEmail(e.target.value)
+  }
+
+  const handleUserNameChange =(e)=>{
+    setUserName(e.target.value)
+   }
+
+  const handleMessageChange =(e)=>{
+    setMessage(e.target.value)
+   }
+  const sendEmail=(e)=>{
+   console.log("sf")
+    const serviceId="service_yfpsn9e";
+    const tempateId ="template_wjrejul";
+    const publicKey="E4htc6Jdo1YcGDhMo";
+    emailjs.send(serviceId,tempateId,{
+      from_name: userName,
+      email: Email,
+      message: Message,
+    },publicKey)
+    .then(() => {
+      message.success('Sent Successfully');
+    })
+    .catch(() => {
+      message.error('Error');
+    });
+  };
+      
+  
+  
+    
   const scrollToAbout = () => {
+
     if (targetRef.current) {
       targetRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   const scrollToProject=() => {
     if (targetRef2.current) {
       targetRef2.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   const scrollToGetTouch=() => {
     if (targetRef3.current) {
       targetRef3.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   const goGithub=()=>{
     window.location.href ="https://github.com/Aminemazari";
   }
+
   const Golinkdln=()=>{
     window.location.href ="https://www.linkedin.com/in/aminemazari/";
   }
+
   return (
   
     
@@ -127,10 +170,10 @@ const Portfolio = () => {
               <h1 className='textDisscuss'>Let’s discuss on something <span className='cool'>cool</span> together</h1>
             </div>
             <div className='formCountainer'>
-                <input type="text" className="name"  placeholder="Your name" />
-                <input type="email" className="name"  placeholder="Your email" />
-                 <input className="name" placeholder="Your message"></input>
-                 <button className='sendMessage'><img src={send}/>Send Message</button>
+                <input type="text" className="name"  placeholder="Your name" value={userName} onChange={handleUserNameChange}/>
+                <input type="email" className="name" value={Email} onChange={handleEmailChange} placeholder="Your email" />
+                 <input className="name" placeholder="Your message" value={Message} onChange={handleMessageChange}></input>
+                 <button className='sendMessage' onClick={sendEmail}><img src={send} />Send Message</button>
             </div>
        </div> 
       </section>
