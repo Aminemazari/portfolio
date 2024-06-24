@@ -563,5 +563,15 @@ justify-self: center;
         width: 100%;
     }
 }
-
+.navLink{
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    color: var(--secondaryColor);
+    background-color: transparent;
+    margin-top: 20px;
+    border: 3px solid var(--secondaryColor);
+    padding: 10px;
+}
 

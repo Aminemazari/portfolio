@@ -6,6 +6,8 @@ import Navbar from '../component/navbar'
 import picture from "../assets/photo_2024-06-21_20-31-48.jpg"
 import pictureTwo from "../assets/photo_2024-06-21_19-09-25.jpg"
 import tailwind from "../assets/tailwind.svg"
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 import html from "../assets/html.svg"
 import reactpics from "../assets/react.svg"
 import css from "../assets/css.svg"
@@ -23,6 +25,7 @@ import linkdln from "../assets/Frame 10.svg"
 import Circle from '../component/Circle';
 import { Button, message, Space } from 'antd';
 import emailjs from 'emailjs-com';
+import resumer from "../assets/resumer.pdf"
 const Portfolio = () => {
   const [Email,setEmail]= useState("");
   const [userName,setUserName]= useState("");
@@ -103,11 +106,11 @@ const Portfolio = () => {
     window.location.href ="https://www.linkedin.com/in/aminemazari/";
   }
 
+  
   return (
   
     
     <div className="hero">
-       
       <Navbar onclick={handleDarkMode} goAbout={scrollToAbout} goProject={scrollToProject} goContact={scrollToGetTouch}/>
       <section className='Introduction' >
         <div className='sammary'>
@@ -152,6 +155,9 @@ const Portfolio = () => {
             <img src={html} className='skill'></img> 
             <img src={tailwind} className='skill'></img>
         </div>
+        <a href={resumer} download="resumer" target='_blank'>
+        <button className={"navLink"}>Download Resume</button>
+        </a>
         </div>
 
       </section>

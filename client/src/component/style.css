@@ -135,9 +135,23 @@
 }
 }
 @media screen and (max-width: 970px)  {
-    .navbar{
+    .navBarButtton{
         display: none;
     }
+    .MyName{
+        display: none;
+    }
+    .modesButton{
+        position: absolute;
+        left: 0px;
+    }
+    .navbar{
+       
+            height: 40px;
+            width:150px ;
+       
+    }
+
     .menu{
         display: block;
     }
